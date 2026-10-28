@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #18342D;
+    --color-gold: #C4A46B;
+    --color-ivory: #F7F4ED;
+    --color-charcoal: #242622;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F4ED;
+    color: #242622;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4ED;
+    color: #242622;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background-color: #C4A46B;
+    selection-color: #18342D;
+  }
+
+  ::selection {
+    background-color: #C4A46B;
+    color: #18342D;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #DFBF82 0%, #C4A46B 50%, #9E7D46 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .editorial-shadow {
+    box-shadow: 0 20px 40px -15px rgba(24, 52, 45, 0.08);
+  }
+
+  .editorial-card-shadow {
+    box-shadow: 0 10px 30px -10px rgba(24, 52, 45, 0.06);
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4A46B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #18342D;
+}
